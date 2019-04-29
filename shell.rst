@@ -29,19 +29,27 @@
 
 8: Given a file, replace all occurrence of word "ABC" with "DEF" from 5th line till end in only those lines that contains word "MNO"
 
-* $sed –n '5,$p' file1|sed '/MNO/s/ABC/DEF/'
+::
+
+$sed –n '5,$p' file1|sed '/MNO/s/ABC/DEF/'
 
 9: Given a file, write a command sequence to find the count of each word.
 
-* $tr –s  "(backslash)040" <file1|tr –s  "(backslash)011"|tr "(backslash)040 (backslash)011" "(backslash)012" | uniq –c
+::
+
+$tr –s  "(backslash)040" <file1|tr –s  "(backslash)011"|tr "(backslash)040 (backslash)011" "(backslash)012" | uniq –c
 
 10: How will you find the 99th line of a file using only tail and head command?
 
-* $tail +99 file1|head -1
+::
+
+$tail +99 file1|head -1
 
 11: Print the 10th line without using tail and head command.
 
-* $sed –n '10p' file1
+::
+
+$sed –n '10p' file1
 
 12: In my bash shell I want my prompt to be of format '$"Present working directory":"hostname"> and load a file containing a list of user-defined functions as soon as I log in, how will you automate this?
 
@@ -60,7 +68,7 @@
 
 14: I want to create a directory such that anyone in the group can create a file and access any person's file in it but none should be able to delete a file other than the one created by himself.
 
-* We can create the directory giving read and execute access to everyone in the group and setting its sticky bit "t" on as follows::
+* We can create the directory giving read and execute access to everyone in the group and setting its sticky bit "t" on as follows:
    $mkdir tree
  
    $chmod g+wx tree
@@ -73,7 +81,7 @@
    $uptime
 
 16: How would you find out all information about a specific user like his default shell, real-life name, default directory, when and how long he has been using the system?
-* command::
+::
     
    $finger user1
    Login: user1			
@@ -83,6 +91,7 @@
    On since Mon Apr 29 09:17 (IST) on :0 from :0 (messages off)
    No mail.
    No Plan.
+
 17: What is the difference between $$ and $!?
  
 * $$ gives the process id of the currently executing process whereas $! Shows the process id of the process that recently went into the background.
@@ -131,11 +140,11 @@
  echo "Welcome $i times"
  done
 
- 24: How do we delete all blank lines in a file?
+24: How do we delete all blank lines in a file?
 
- * $sed  '^ [(backslash)011(backslash)040]*$/d' text1
+* $sed  '^ [(backslash)011(backslash)040]*$/d' text1
 
-**NOTE:** where (backslash)011 is an octal equivalent of space and
+**Note:** where (backslash)011 is an octal equivalent of space and
           (backslash)040 is an octal equivalent of the tab
 
 25: How will I insert a line "ABCDEF" at every 100th line of a file?
