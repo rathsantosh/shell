@@ -16,7 +16,9 @@
 
 5: How will you pass and access arguments to a script in Linux?
 
-* Arguments can be passed as:
+::
+
+ Arguments can be passed as:
   scriptName "Arg1" "Arg2"…."Argn" and can be accessed inside the script as $1 , $2 .. $n
 
 6: What is the significance of $#?
@@ -54,7 +56,10 @@ $sed –n '10p' file1
 12: In my bash shell I want my prompt to be of format '$"Present working directory":"hostname"> and load a file containing a list of user-defined functions as soon as I log in, how will you automate this?
 
 * In bash shell, we can create ".profile"  and .bashrc file which automatically gets invoked as soon as I log in and write the      following syntax into it.
- export PS1='$ `pwd`:`hostname`>' .File1
+ 
+::
+
+export PS1='$ `pwd`:`hostname`>' .File1
 
 **Note:** Here File1 is the file containing the user-defined functions and "." invokes this file in current shell.
 
@@ -68,17 +73,20 @@ $sed –n '10p' file1
 
 14: I want to create a directory such that anyone in the group can create a file and access any person's file in it but none should be able to delete a file other than the one created by himself.
 
-* We can create the directory giving read and execute access to everyone in the group and setting its sticky bit "t" on as follows:
-   $mkdir tree
- 
-   $chmod g+wx tree
- 
-   $chmod +t tree
+* We can create the directory giving read and execute access to everyone in the group and setting its sticky bit "t" on as follows
+::
+
+
+$mkdir tree
+$chmod g+wx tree
+$chmod +t tree
 
 15: How can you find out how long the system has been running
 
-* We can find this by using the command "uptime"::
-   $uptime
+* We can find this by using the command "uptime"
+::
+
+$uptime
 
 16: How would you find out all information about a specific user like his default shell, real-life name, default directory, when and how long he has been using the system?
 ::
@@ -127,10 +135,13 @@ $sed –n '10p' file1
 
 22: How to set an array in Linux?
 
-* In bash
-  A=(element1 element2 element3 …. elementn)
+::
 
-23: Write for loop script
+
+ In bash
+ A=(element1 element2 element3 …. elementn)
+
+23: Write a for loop script
 
 ::
 
