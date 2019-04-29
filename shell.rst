@@ -19,7 +19,7 @@
 ::
 
  Arguments can be passed as:
-  scriptName "Arg1" "Arg2"…."Argn" and can be accessed inside the script as $1 , $2 .. $n
+ scriptName "Arg1" "Arg2"…."Argn" and can be accessed inside the script as $1 , $2 .. $n
 
 6: What is the significance of $#?
 
@@ -59,7 +59,8 @@ $sed –n '10p' file1
  
 ::
 
-export PS1='$ `pwd`:`hostname`>' .File1
+
+ export PS1='$ `pwd`:`hostname`>' .File1
 
 **Note:** Here File1 is the file containing the user-defined functions and "." invokes this file in current shell.
 
@@ -153,7 +154,9 @@ $uptime
 
 24: How do we delete all blank lines in a file?
 
-* $sed  '^ [(backslash)011(backslash)040]*$/d' text1
+::
+
+$sed  '^ [(backslash)011(backslash)040]*$/d' text1
 
 **Note:** where (backslash)011 is an octal equivalent of space and
           (backslash)040 is an octal equivalent of the tab
